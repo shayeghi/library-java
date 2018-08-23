@@ -2,6 +2,7 @@ package library;
 
 import java.util.Scanner;
 
+
 public class Library {
 	public static void main(String[] args) {
 		System.out.println("Welcome to library Management 1.0 ");
@@ -37,15 +38,16 @@ public class Library {
 			System.out.println("plese give me password  admin:");
 			String pass_admin = input_admin.nextLine();
 			if (user_admin.equals(admin_array[0]) && pass_admin.equals(admin_array[1])) {
+				
 
 				home_page(admin_array, exist_member, name_member, family_member, age_member, gendre, id_book);
+				
 				admin = false;
 			}
 			System.out.println("Sorry but this username or pasword not exit ...try again...");
-
 		}
-
-	}
+	 
+	} 
 
 	public static void home_page(String[] admin_array, boolean[] exist_member, String[] name_member,
 			String[] family_member, int[] age_member, char[] gendre, int[] id_book) {
@@ -116,7 +118,7 @@ public class Library {
 			} else {
 				System.out.println("the given password doesnt match...lets try again");
 			}
-			input_admin.close();
+		
 		}
 
 		home_admin(admin_array, exist_member, name_member, family_member, age_member, gendre, id_book);
